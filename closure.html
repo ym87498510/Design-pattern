@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>closure</title>
+	<meta charset="UTF-8">
+	<title>closure</title>
 </head>
 <body>
-<!--<button>按钮1</button>-->
-<!--<button>按钮2</button>-->
-<!--<button>按钮3</button>-->
-<script>
+	<!--<button>按钮1</button>-->
+	<!--<button>按钮2</button>-->
+	<!--<button>按钮3</button>-->
+	<script>
 //    var arr = document.querySelectorAll('button')
 //    arr = [...arr] || Array.prototype.slice.call(arr)
 //    for(var i=0;i<arr.length;i++){
@@ -37,8 +37,31 @@
 //    f()
 //    f()
 //    f()
-
-
+	// var mult = function(){
+	// 	var a = 1
+	// 	for (var i = 0;i<arguments.length;i++){
+	// 		a *= arguments[i]
+	// 	}
+	// 	return a
+	// }
+	// console.log(mult(1,4,6,8))
+	var cache = {}
+	var mult = function(){
+		var a =1
+		for (var i = 0;i<arguments.length;i++){
+			a *= arguments[i]
+		}
+		return a
+	}
+	console.log(mult(1,4,6,8))
+	
 </script>
 </body>
 </html>
+
+
+
+
+
+
+

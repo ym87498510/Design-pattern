@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var b= {name:'C++'}
+//    var a= {name:'java'}
+//    window.name = 'js'
+//    var get = function(name){
+//        console.log(this.name,name)
+//    }.bind(a,'ruby')
+//    console.dir(get)
+//    get()
+
+//    setTimeout(get,1000)
+//    get.call(b)
+//    console.dir(get)
+//
+//    get()
+//    setTimeout(get.bind(b),2000)
+    // 借用其他对象的方法
+    var A = function(name){
+        this.name = name
+    }
+
+    var B = function(){
+        // 借用A函数来执行
+        A.apply(this,arguments)
+    }
+    B.prototype.getName = function(){
+        return this.name
+    }
+    var b = new B('java')
+    console.log(b.getName())
+
+    function add(){
+        console.log(this)
+    }
+    add()
+</script>
+</body>
+</html>
